@@ -1,0 +1,10 @@
+.doctor-footer {
+  background: linear-gradient(90deg, #0065c0, #38adb5);
+  color: #e7cb7f;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-footer .brand-highlight {
+  color: #fff46a;
+  font-weight: 600;
+}

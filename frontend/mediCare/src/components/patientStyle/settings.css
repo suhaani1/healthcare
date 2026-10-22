@@ -1,0 +1,9 @@
+.profile-container{
+background-image: url("../../assets/portals/21888d0b72f004cf2a94a2da7eb489fd.jpg");
+/* background-position: center; */
+background-repeat: no-repeat;
+background-size: cover;
+}
+.text{
+   color:cadetblue;
+}

@@ -1,0 +1,13 @@
+
+body{
+   height: 100%;
+
+}
+.logout.logout-container{
+   background-image: url("../../assets/portals/logout.jpg");
+    background-size: cover;
+   background-position:center;
+   background-repeat: no-repeat;
+   height: 100%;
+
+}

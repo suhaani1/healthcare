@@ -1,0 +1,237 @@
+/* ================================
+   REGISTER PAGE
+================================ */
+
+.bgColor {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef8fb, #f7fbfd);
+  padding: 30px 0;
+}
+
+.layout {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================================
+   MAIN CARD
+================================ */
+
+.layout .card {
+  width: 100%;
+  max-width: 1050px;
+  border: none;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 15px 45px rgba(35, 68, 93, 0.12);
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* ================================
+   LEFT IMAGE
+================================ */
+
+.register-image {
+  width: 90%;
+  max-height: 560px;
+  object-fit: contain;
+  margin: auto;
+}
+
+/* Floating animation */
+.logo-slide-float {
+  animation: floatingImage 4s ease-in-out infinite;
+}
+
+@keyframes floatingImage {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   RIGHT SIDE
+================================ */
+
+.layout .col-lg-6:last-child {
+  padding: 20px 15px;
+}
+
+.layout .col-lg-6:last-child img {
+  object-fit: contain;
+}
+
+/* ================================
+   HEADING
+================================ */
+
+.heading {
+  color: #23445d;
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 0.2px;
+}
+
+/* ================================
+   FORM
+================================ */
+
+#signupForm {
+  margin-top: 10px;
+}
+
+#signupForm .form-label {
+  color: #405565;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+/* Inputs and Selects */
+
+#signupForm .form-control,
+#signupForm .form-select {
+  height: 46px;
+  border: 1px solid #d7e4eb;
+  border-radius: 9px;
+  background-color: #fbfdfe;
+  color: #334e60;
+  font-size: 14px;
+  padding: 10px 13px;
+  transition: all 0.25s ease;
+  box-shadow: none;
+}
+
+#signupForm .form-control::placeholder {
+  color: #9aaab5;
+}
+
+/* Focus */
+
+#signupForm .form-control:focus,
+#signupForm .form-select:focus {
+  border-color: #5b9fb7;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(91, 159, 183, 0.12);
+}
+
+/* Select arrow / cursor */
+
+#signupForm .form-select {
+  cursor: pointer;
+}
+
+/* ================================
+   SUBMIT BUTTON
+================================ */
+
+#signupForm .btn-primary {
+  height: 46px;
+  border: none;
+  border-radius: 9px;
+  background: #5b9fb7;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: all 0.25s ease;
+}
+
+#signupForm .btn-primary:hover {
+  background: #438ca5;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(67, 140, 165, 0.22);
+}
+
+#signupForm .btn-primary:active {
+  transform: translateY(0);
+}
+
+/* ================================
+   LOGIN LINK
+================================ */
+
+.layout small {
+  color: #70818c;
+  font-size: 13px;
+}
+
+.layout small a {
+  color: #438ca5;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.layout small a:hover {
+  color: #23445d;
+  text-decoration: underline;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 991px) {
+  .bgColor {
+    padding: 20px 0;
+  }
+
+  .layout {
+    min-height: auto;
+  }
+
+  .layout .card {
+    max-width: 650px;
+    padding: 15px;
+  }
+
+  .layout .col-lg-6:last-child {
+    padding: 20px 10px;
+  }
+
+  .heading {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bgColor {
+    padding: 10px;
+  }
+
+  .layout {
+    padding: 0;
+  }
+
+  .layout .card {
+    border-radius: 16px;
+    padding: 10px;
+    box-shadow: 0 8px 25px rgba(35, 68, 93, 0.1);
+  }
+
+  .layout .col-lg-6:last-child {
+    padding: 15px 5px;
+  }
+
+  .heading {
+    font-size: 21px;
+  }
+
+  #signupForm .form-control,
+  #signupForm .form-select,
+  #signupForm .btn-primary {
+    height: 44px;
+  }
+}

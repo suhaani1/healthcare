@@ -1,0 +1,271 @@
+// #!/usr/bin/env node
+
+// /**
+//  * Module dependencies.
+//  */
+
+// var app = require('../app');
+// var debug = require('debug')('saathicare-be:server');
+// var http = require('http');
+
+// /**
+//  * Get port from environment and store in Express.
+//  */
+
+// var port = normalizePort(process.env.PORT || '3011');
+// app.set('port', port);
+
+// /**
+//  * Create HTTP server.
+//  */
+
+// var server = http.createServer(app);
+
+// /**
+//  * Listen on provided port, on all network interfaces.
+//  */
+
+// server.listen(port);
+// server.on('error', onError);
+// server.on('listening', onListening);
+
+// /**
+//  * Normalize a port into a number, string, or false.
+//  */
+
+// function normalizePort(val) {
+//   var port = parseInt(val, 10);
+
+//   if (isNaN(port)) {
+//     // named pipe
+//     return val;
+//   }
+
+//   if (port >= 0) {
+//     // port number
+//     return port;
+//   }
+
+//   return false;
+// }
+
+// /**
+//  * Event listener for HTTP server "error" event.
+//  */
+
+// function onError(error) {
+//   if (error.syscall !== 'listen') {
+//     throw error;
+//   }
+
+//   var bind = typeof port === 'string'
+//     ? 'Pipe ' + port
+//     : 'Port ' + port;
+
+//   // handle specific listen errors with friendly messages
+//   switch (error.code) {
+//     case 'EACCES':
+//       console.error(bind + ' requires elevated privileges');
+//       process.exit(1);
+//       break;
+//     case 'EADDRINUSE':
+//       console.error(bind + ' is already in use');
+//       process.exit(1);
+//       break;
+//     default:
+//       throw error;
+//   }
+// }
+
+// /**
+//  * Event listener for HTTP server "listening" event.
+//  */
+
+// function onListening() {
+//   var addr = server.address();
+//   var bind = typeof addr === 'string'
+//     ? 'pipe ' + addr
+//     : 'port ' + addr.port;
+//   debug('Listening on ' + bind);
+// }
+
+
+
+
+
+/**
+ * Module dependencies.
+ */
+
+var app = require('../app');
+var debug = require('debug')('saathicare-be:server');
+var http = require('http');
+
+// add socket.io
+const { Server } = require('socket.io');
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+var port = normalizePort(process.env.PORT || '3011');
+app.set('port', port);
+
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
+
+/**
+ * Attach Socket.IO to the same http server.
+ *
+ * Note: set cors origin appropriately for production.
+ */
+const io = new Server(server, {
+  cors: {
+    origin: "*", // change to your frontend URL in production, e.g. "https://your-app.com"
+    methods: ["GET", "POST"]
+  }
+});
+
+// expose io on the express app so routes/controllers can use it
+app.set('io', io);
+
+/**
+ * Minimal in-memory chat store (replace with DB in production)
+ * Structure: { [roomId]: [{ fromId, fromName, toId, text, ts }, ...] }
+ */
+const chats = {};
+
+/**
+ * Socket handlers
+ */
+io.on('connection', (socket) => {
+  console.log('socket connected', socket.id);
+
+  socket.on('joinRoom', ({ roomId, userId, userName }) => {
+    try {
+      socket.join(roomId);
+      console.log(`${userName || userId} joined ${roomId}`);
+    } catch (err) {
+      console.error('joinRoom error', err);
+    }
+  });
+
+  socket.on('leaveRoom', ({ roomId, userId }) => {
+    try {
+      socket.leave(roomId);
+    } catch (err) {
+      console.error('leaveRoom error', err);
+    }
+  });
+
+  // receive chat message and broadcast to the room. Also persist to in-memory store.
+  socket.on('chat:message', (msg) => {
+    try {
+      // msg: { roomId, fromId, fromName, toId, text, ts }
+      if (!msg || !msg.roomId) return;
+      chats[msg.roomId] = chats[msg.roomId] || [];
+      chats[msg.roomId].push(msg);
+
+      // broadcast to everyone in the room
+      io.to(msg.roomId).emit('chat:message', msg);
+    } catch (err) {
+      console.error('chat:message error', err);
+    }
+  });
+
+  socket.on('disconnect', () => {
+    console.log('socket disconnected', socket.id);
+  });
+});
+
+/**
+ * REST endpoints for chat persistence (optional).
+ * These are attached to the express app so the frontend can fetch history.
+ * Replace with DB-backed controllers in production.
+ */
+app.post('/api/chats', (req, res) => {
+  const msg = req.body;
+  if (!msg || !msg.roomId) return res.status(400).json({ error: 'Invalid message' });
+  chats[msg.roomId] = chats[msg.roomId] || [];
+  chats[msg.roomId].push(msg);
+  // broadcast persisted message to room (useful if REST used as primary sender)
+  io.to(msg.roomId).emit('chat:message', msg);
+  return res.json({ ok: true });
+});
+
+app.get('/api/chats/room/:roomId', (req, res) => {
+  const roomId = req.params.roomId;
+  return res.json({ messages: chats[roomId] || [] });
+});
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+
+function onError(error) {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+
+  var bind = typeof port === 'string'
+    ? 'Pipe ' + port
+    : 'Port ' + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+  debug('Listening on ' + bind);
+  console.log('Server listening on ' + bind);
+}

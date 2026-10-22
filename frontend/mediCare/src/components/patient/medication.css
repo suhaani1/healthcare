@@ -1,0 +1,21 @@
+.medication-bg {
+  background: linear-gradient(to right, #f5fcff, #e8f9f4);
+  min-height: 100vh;
+}
+
+.card {
+  border-radius: 14px;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.btn-primary {
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0a58ca;
+}

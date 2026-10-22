@@ -1,0 +1,39 @@
+.symptoms-log{
+  
+   background-image: url("../../assets/portals/symptomBG.jpg");
+   background-size: cover;
+   background-position:center;
+}
+
+.symptoms-log-bg {
+  /* background: linear-gradient(to right, #e3f2fd, #f1f8ff); */
+  background: linear-gradient(135deg, #BAC94A, #96D7C6);
+  min-height: 100vh;
+}
+.container{
+  margin-top: 80px;
+}
+
+.card {
+  border-radius: 16px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.form-control {
+  border-radius: 8px;
+}
+
+.btn-primary {
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0a58ca;
+}
+
+.alert-info {
+  font-size: 1rem;
+  border-radius: 10px;
+}
+

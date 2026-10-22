@@ -1,0 +1,27 @@
+.text-gradient {
+  background: linear-gradient(135deg, #96D7C6, #BAC94A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.doctor1{
+  background-image: url("../../assets/portals/das.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 0;
+}
+
+.doctor-dashboard .card {
+  border-radius: 10px;
+  background: #fff;
+}
+
+.doctor-dashboard table {
+  font-size: 0.95rem;
+}
+
+.doctor-dashboard .badge {
+  font-size: 0.85rem;
+}

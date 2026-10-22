@@ -1,0 +1,42 @@
+
+
+footer {
+  background-color: #16697A ;
+  color: #8C8C8C;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+footer h5, footer h6 {
+  color: #d2f3f7;
+  margin-bottom: 1rem;
+}
+
+footer p,
+footer li,
+footer a {
+  color: #e9c04f;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+footer a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  /* color: #157773; */
+  text-decoration: underline;
+}
+
+footer hr {
+  border-color: #ebd4c4;
+  opacity: 0.5;
+}
+
+footer .text-center small {
+  color: #ecdbd3;
+  font-size: 0.85rem;
+}
+

@@ -1,0 +1,114 @@
+.gradient-text {
+  /* background: linear-gradient(135deg, #96D7C6, #E2D36B); */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+/* 
+.doctor-profile-card {
+  border-left: 6px solid #BAC94A;
+} */
+
+/* Overall page background */
+.patient-viewer {
+  background-color: #fff;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+/* Sidebar patient list */
+.list-group {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #d1dbe1; /* Navy background */
+}
+
+.list-group-item {
+  border: none;
+  padding: 12px 16px;
+  font-weight: 500;
+  background-color: transparent;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+.list-group-item:hover {
+  background-color: #c3ced0; /* Teal hover */
+  cursor: pointer;
+}
+
+.list-group-item.active {
+  background-color: #878e91; /* Golden brown active */
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Main patient card */
+.card1 {
+  border-radius: 16px;
+  background: #dcdd81;
+  border: 1px solid #918176; /* Taupe border */
+}
+
+.card1 h4 {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #001931; /* Navy heading */
+}
+
+.card1 p {
+  font-size: 0.95rem;
+  color: #100101; /* Neutral gray text */
+}
+
+.card1 h6 {
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  color: #6d581e; /* Golden brown section titles */
+}
+
+/* Section dividers */
+hr {
+  border-top: 1px solid #4d250a; /* Taupe divider */
+}
+
+/* Links for documents */
+.card1 a {
+  color: #157773; /* Teal links */
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.card1 a:hover {
+  text-decoration: underline;
+}
+
+/* Empty state messages */
+.text-muted {
+  font-style: italic;
+  color: #8C8C8C;
+}
+
+/* Status badges */
+.badge {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.badge-success {
+  background-color: #157773;
+  color: white;
+}
+
+.badge-warning {
+  background-color: #574513;
+  color: white;
+}
+
+.badge-danger {
+  background-color: #cdad9e;
+  color: white;
+}

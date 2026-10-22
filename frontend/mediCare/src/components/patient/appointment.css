@@ -1,0 +1,1134 @@
+/* =========================================================
+   APPOINTMENT PAGE
+   Friendly Healthcare Theme
+   Blue + Teal + White
+========================================================= */
+
+.appointment-page {
+  min-height: 100vh;
+  padding: 45px 6%;
+  background: #f5f9fc;
+  color: #263b4a;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.appointment-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.appointment-header h1 {
+  margin: 0 0 8px;
+  color: #23445d;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.appointment-header p {
+  margin: 0;
+  color: #718394;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   SEARCH & FILTERS
+========================================================= */
+
+.appointment-filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e2ebf2;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(45, 75, 95, 0.06);
+}
+
+.appointment-search input,
+.appointment-filter input,
+.appointment-filter select {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid #d7e3eb;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #405565;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.appointment-search input::placeholder {
+  color: #9aa8b2;
+}
+
+.appointment-search input:focus,
+.appointment-filter input:focus,
+.appointment-filter select:focus {
+  border-color: #5b9fb7;
+  box-shadow: 0 0 0 3px rgba(91, 159, 183, 0.12);
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  margin: 0 0 5px;
+  color: #23445d;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #7b8c99;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.appointment-error {
+  margin-bottom: 25px;
+  padding: 14px 18px;
+  border: 1px solid #f0cccc;
+  border-radius: 8px;
+  background: #fff5f5;
+  color: #b04a4a;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   DOCTOR LIST
+========================================================= */
+
+.doctor-list-section {
+  width: 100%;
+}
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+
+/* =========================================================
+   DOCTOR CARD
+========================================================= */
+
+.doctor-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e1eaf0;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(45, 75, 95, 0.07);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(45, 75, 95, 0.12);
+}
+
+
+/* =========================================================
+   DOCTOR PHOTO
+========================================================= */
+
+.doctor-card-photo {
+  width: 100%;
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #edf6fa;
+}
+
+.doctor-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.doctor-card-placeholder {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #5b9fb7;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   DOCTOR CARD CONTENT
+========================================================= */
+
+.doctor-card-content {
+  padding: 20px;
+}
+
+.doctor-card-content h3 {
+  margin: 0 0 6px;
+  color: #23445d;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.doctor-specialization {
+  margin: 0 0 7px;
+  color: #438ca5;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.doctor-experience {
+  margin: 0 0 7px;
+  color: #718394;
+  font-size: 13px;
+}
+
+.doctor-qualification {
+  margin: 0 0 10px;
+  color: #617481;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.doctor-bio {
+  min-height: 60px;
+  margin: 0 0 18px;
+  color: #718394;
+  font-size: 13px;
+  line-height: 1.6;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   DOCTOR CARD ACTIONS
+========================================================= */
+
+.doctor-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+
+/* =========================================================
+   VIEW PROFILE BUTTON
+========================================================= */
+
+.view-doctor-profile-btn {
+  width: 100%;
+  min-height: 43px;
+  padding: 10px 15px;
+  border: 1px solid #5b9fb7;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #438ca5;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-doctor-profile-btn:hover {
+  background: #5b9fb7;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   BOOK APPOINTMENT BUTTON
+========================================================= */
+
+.book-appointment-btn {
+  width: 100%;
+  min-height: 43px;
+  padding: 10px 15px;
+  border: 1px solid #5b9fb7;
+  border-radius: 8px;
+  background: #5b9fb7;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.book-appointment-btn:hover {
+  background: #478aa3;
+  border-color: #478aa3;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.appointment-loading {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #e2ebf2;
+  border-radius: 14px;
+}
+
+.appointment-loading p {
+  margin: 15px 0 0;
+  color: #7b8c99;
+  font-size: 14px;
+}
+
+.appointment-spinner {
+  width: 38px;
+  height: 38px;
+  border: 4px solid #dcebf1;
+  border-top-color: #5b9fb7;
+  border-radius: 50%;
+  animation: appointmentSpin 0.8s linear infinite;
+}
+
+@keyframes appointmentSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   NO DOCTORS / NO APPOINTMENTS
+========================================================= */
+
+.no-doctors,
+.no-appointments {
+  padding: 50px 20px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e2ebf2;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(45, 75, 95, 0.04);
+}
+
+.no-doctors h3,
+.no-appointments h3 {
+  margin: 0 0 8px;
+  color: #405565;
+  font-size: 18px;
+}
+
+.no-doctors p,
+.no-appointments p {
+  margin: 0;
+  color: #7b8c99;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   MY APPOINTMENTS
+========================================================= */
+
+.my-appointments-section {
+  margin-top: 55px;
+}
+
+.appointments-table-wrapper {
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1px solid #e1eaf0;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(45, 75, 95, 0.06);
+}
+
+.appointments-table {
+  width: 100%;
+  min-width: 750px;
+  border-collapse: collapse;
+}
+
+.appointments-table th {
+  padding: 15px;
+  background: #f0f6fa;
+  color: #40596b;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  border-bottom: 1px solid #dce6ec;
+}
+
+.appointments-table td {
+  padding: 15px;
+  color: #5e707d;
+  font-size: 13px;
+  border-bottom: 1px solid #edf2f5;
+}
+
+.appointments-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.appointments-table tbody tr:hover {
+  background: #f9fbfd;
+}
+
+.appointments-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   APPOINTMENT STATUS
+========================================================= */
+
+.appointment-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 75px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.status-pending {
+  background: #fff4df;
+  color: #a06a17;
+}
+
+.status-accepted {
+  background: #e4f3f7;
+  color: #28778d;
+}
+
+.status-completed {
+  background: #e7eef9;
+  color: #416d9e;
+}
+
+.status-rejected {
+  background: #fbe9e9;
+  color: #b04a4a;
+}
+
+
+/* =========================================================
+   CANCEL APPOINTMENT
+========================================================= */
+
+.cancel-appointment-btn {
+  padding: 7px 13px;
+  border: 1px solid #d98585;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #b65c5c;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-appointment-btn:hover {
+  background: #c96f6f;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   BOOKING MODAL OVERLAY
+========================================================= */
+
+.appointment-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(24, 52, 69, 0.65);
+  overflow-y: auto;
+}
+
+
+/* =========================================================
+   BOOKING MODAL
+========================================================= */
+
+.appointment-modal {
+  width: 100%;
+  max-width: 570px;
+  max-height: 92vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(25, 50, 65, 0.22);
+}
+
+.appointment-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 25px;
+  border-bottom: 1px solid #e3ebf0;
+}
+
+.appointment-modal-header h2 {
+  margin: 0 0 4px;
+  color: #23445d;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.appointment-modal-header p {
+  margin: 0;
+  color: #7b8c99;
+  font-size: 13px;
+}
+
+.appointment-modal-header strong {
+  color: #438ca5;
+}
+
+.appointment-modal-close {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #f0f5f8;
+  color: #617582;
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.appointment-modal-close:hover {
+  background: #e3ebf0;
+  color: #23445d;
+}
+
+
+/* =========================================================
+   BOOKING FORM
+========================================================= */
+
+.appointment-form {
+  padding: 25px;
+}
+
+.appointment-form-group {
+  margin-bottom: 20px;
+}
+
+.appointment-form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #405565;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.appointment-form-group input,
+.appointment-form-group textarea {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #d7e3eb;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #405565;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.appointment-form-group input {
+  height: 45px;
+}
+
+.appointment-form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.appointment-form-group input::placeholder,
+.appointment-form-group textarea::placeholder {
+  color: #9aa8b2;
+}
+
+.appointment-form-group input:focus,
+.appointment-form-group textarea:focus {
+  border-color: #5b9fb7;
+  box-shadow: 0 0 0 3px rgba(91, 159, 183, 0.12);
+}
+
+
+/* =========================================================
+   BOOKING MODAL ACTIONS
+========================================================= */
+
+.appointment-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.appointment-cancel-btn,
+.appointment-confirm-btn {
+  min-width: 120px;
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.appointment-cancel-btn {
+  border: 1px solid #d4e0e7;
+  background: #ffffff;
+  color: #617481;
+}
+
+.appointment-cancel-btn:hover {
+  background: #f1f5f7;
+}
+
+.appointment-confirm-btn {
+  border: 1px solid #5b9fb7;
+  background: #5b9fb7;
+  color: #ffffff;
+}
+
+.appointment-confirm-btn:hover {
+  background: #478aa3;
+  border-color: #478aa3;
+}
+
+
+/* =========================================================
+   DOCTOR PROFILE MODAL OVERLAY
+========================================================= */
+
+.doctor-profile-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(24, 52, 69, 0.68);
+  overflow-y: auto;
+}
+
+
+/* =========================================================
+   DOCTOR PROFILE MODAL
+========================================================= */
+
+.doctor-profile-modal {
+  width: 100%;
+  max-width: 850px;
+  max-height: 92vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(25, 50, 65, 0.25);
+}
+
+
+/* =========================================================
+   PROFILE MODAL HEADER
+========================================================= */
+
+.doctor-profile-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 30px;
+  border-bottom: 1px solid #e3ebf0;
+}
+
+.doctor-profile-modal-header h2 {
+  margin: 0;
+  color: #23445d;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.doctor-profile-modal-header p {
+  margin: 5px 0 0;
+  color: #7b8c99;
+  font-size: 13px;
+}
+
+.doctor-profile-close-btn {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #f0f5f8;
+  color: #617582;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.doctor-profile-close-btn:hover {
+  background: #e3ebf0;
+  color: #23445d;
+}
+
+
+/* =========================================================
+   PROFILE CONTENT
+========================================================= */
+
+.doctor-profile-content {
+  padding: 30px;
+}
+
+
+/* =========================================================
+   PROFILE TOP
+========================================================= */
+
+.doctor-profile-top {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 25px;
+  border: 1px solid #dceaf0;
+  border-radius: 14px;
+  background: #f1f8fb;
+}
+
+.doctor-profile-image {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.doctor-profile-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(45, 75, 95, 0.12);
+}
+
+.doctor-profile-placeholder {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #5b9fb7;
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.doctor-profile-main-info h2 {
+  margin: 0 0 8px;
+  color: #23445d;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.doctor-profile-specialization {
+  margin: 0 0 7px;
+  color: #438ca5;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.doctor-profile-experience {
+  margin: 0;
+  color: #718394;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   PROFESSIONAL INFORMATION
+========================================================= */
+
+.doctor-profile-information {
+  margin-top: 30px;
+}
+
+.doctor-profile-information h3,
+.doctor-profile-bio-section h3 {
+  margin: 0 0 18px;
+  color: #23445d;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.doctor-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.doctor-profile-info-card {
+  min-height: 75px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e1eaf0;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.doctor-profile-info-card:hover {
+  border-color: #cbdfe8;
+  background: #fbfdfe;
+}
+
+.doctor-profile-info-card span {
+  display: block;
+  margin-bottom: 6px;
+  color: #82929e;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.doctor-profile-info-card strong {
+  display: block;
+  color: #405565;
+  font-size: 14px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+
+/* =========================================================
+   ABOUT DOCTOR
+========================================================= */
+
+.doctor-profile-bio-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f6f9fb;
+  border: 1px solid #e2ebf0;
+  border-radius: 12px;
+}
+
+.doctor-profile-bio-section p {
+  margin: 0;
+  color: #617481;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   PROFILE ACTIONS
+========================================================= */
+
+.doctor-profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.doctor-profile-close-action,
+.doctor-profile-book-action {
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.doctor-profile-close-action {
+  border: 1px solid #d4e0e7;
+  background: #ffffff;
+  color: #617481;
+}
+
+.doctor-profile-close-action:hover {
+  background: #f1f5f7;
+}
+
+.doctor-profile-book-action {
+  border: 1px solid #5b9fb7;
+  background: #5b9fb7;
+  color: #ffffff;
+}
+
+.doctor-profile-book-action:hover {
+  background: #478aa3;
+  border-color: #478aa3;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.appointment-modal::-webkit-scrollbar,
+.doctor-profile-modal::-webkit-scrollbar,
+.appointments-table-wrapper::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.appointment-modal::-webkit-scrollbar-track,
+.doctor-profile-modal::-webkit-scrollbar-track,
+.appointments-table-wrapper::-webkit-scrollbar-track {
+  background: #f1f5f7;
+}
+
+.appointment-modal::-webkit-scrollbar-thumb,
+.doctor-profile-modal::-webkit-scrollbar-thumb,
+.appointments-table-wrapper::-webkit-scrollbar-thumb {
+  background: #bfd2dc;
+  border-radius: 10px;
+}
+
+.appointment-modal::-webkit-scrollbar-thumb:hover,
+.doctor-profile-modal::-webkit-scrollbar-thumb:hover,
+.appointments-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #91b5c4;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .appointment-page {
+    padding: 40px 4%;
+  }
+
+  .doctor-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .appointment-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .appointment-search {
+    grid-column: span 2;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .appointment-page {
+    padding: 30px 18px;
+  }
+
+  .appointment-header {
+    margin-bottom: 25px;
+  }
+
+  .appointment-header h1 {
+    font-size: 26px;
+  }
+
+  .appointment-header p {
+    font-size: 14px;
+  }
+
+  .appointment-filters {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .appointment-search {
+    grid-column: auto;
+  }
+
+  .doctor-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .doctor-card-photo {
+    height: 230px;
+  }
+
+  .section-heading h2 {
+    font-size: 20px;
+  }
+
+  .appointments-table {
+    min-width: 720px;
+  }
+
+  /* Booking Modal */
+
+  .appointment-modal-overlay {
+    padding: 10px;
+  }
+
+  .appointment-modal {
+    max-height: 95vh;
+    border-radius: 14px;
+  }
+
+  .appointment-modal-header {
+    padding: 18px;
+  }
+
+  .appointment-form {
+    padding: 18px;
+  }
+
+  .appointment-modal-actions {
+    flex-direction: column;
+  }
+
+  .appointment-cancel-btn,
+  .appointment-confirm-btn {
+    width: 100%;
+  }
+
+  /* Doctor Profile */
+
+  .doctor-profile-modal-overlay {
+    padding: 10px;
+  }
+
+  .doctor-profile-modal {
+    max-height: 95vh;
+    border-radius: 14px;
+  }
+
+  .doctor-profile-modal-header {
+    padding: 18px;
+  }
+
+  .doctor-profile-content {
+    padding: 18px;
+  }
+
+  .doctor-profile-top {
+    flex-direction: column;
+    text-align: center;
+    padding: 22px 15px;
+  }
+
+  .doctor-profile-main-info h2 {
+    font-size: 22px;
+  }
+
+  .doctor-profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-profile-actions {
+    flex-direction: column;
+  }
+
+  .doctor-profile-close-action,
+  .doctor-profile-book-action {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+  .appointment-page {
+    padding: 25px 13px;
+  }
+
+  .appointment-header h1 {
+    font-size: 23px;
+  }
+
+  .doctor-card-content {
+    padding: 17px;
+  }
+
+  .doctor-card-photo {
+    height: 210px;
+  }
+
+  .doctor-profile-image,
+  .doctor-profile-placeholder {
+    width: 100px;
+    height: 100px;
+  }
+
+  .doctor-profile-placeholder {
+    font-size: 35px;
+  }
+
+  .doctor-profile-modal-header h2 {
+    font-size: 20px;
+  }
+
+  .doctor-profile-content {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,860 @@
+/* =========================================================
+   PATIENT PRESCRIPTION PAGE
+   Friendly Blue + Teal Healthcare Theme
+========================================================= */
+
+.patient-prescription-page {
+  min-height: 100vh;
+  padding: 45px 6%;
+  background: #f5f9fc;
+  color: #263b4a;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.prescription-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.prescription-page-header h1 {
+  margin: 0 0 8px;
+  color: #23445d;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.prescription-page-header p {
+  margin: 0;
+  color: #718394;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   PRESCRIPTION COUNT
+========================================================= */
+
+.prescription-count {
+  min-width: 100px;
+  padding: 15px 20px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #dce8ee;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(45, 75, 95, 0.05);
+}
+
+.prescription-count span {
+  display: block;
+  color: #438ca5;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.prescription-count small {
+  color: #7b8c99;
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.prescription-error {
+  margin-bottom: 25px;
+  padding: 14px 18px;
+  border: 1px solid #f0cccc;
+  border-radius: 9px;
+  background: #fff5f5;
+  color: #b04a4a;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.prescription-loading {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #e1eaf0;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(45, 75, 95, 0.05);
+}
+
+.prescription-loading p {
+  margin-top: 15px;
+  color: #718394;
+  font-size: 14px;
+}
+
+.prescription-spinner {
+  width: 38px;
+  height: 38px;
+  border: 4px solid #dcebf1;
+  border-top-color: #5b9fb7;
+  border-radius: 50%;
+  animation: prescriptionSpin 0.8s linear infinite;
+}
+
+@keyframes prescriptionSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.prescription-empty {
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e1eaf0;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(45, 75, 95, 0.05);
+}
+
+.prescription-empty-icon {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: #e7f3f7;
+  color: #438ca5;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.prescription-empty h2 {
+  margin: 0 0 8px;
+  color: #405565;
+  font-size: 21px;
+}
+
+.prescription-empty p {
+  max-width: 450px;
+  margin: 0;
+  color: #7b8c99;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   PRESCRIPTION LIST
+========================================================= */
+
+.prescription-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* =========================================================
+   PRESCRIPTION CARD
+========================================================= */
+
+.prescription-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e1eaf0;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(45, 75, 95, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.prescription-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(45, 75, 95, 0.09);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.prescription-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 25px;
+  border-bottom: 1px solid #e7eef2;
+  background: #fbfdfe;
+}
+
+.doctor-prescription-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.doctor-prescription-avatar {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #5b9fb7;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.doctor-prescription-info h2 {
+  margin: 0 0 5px;
+  color: #23445d;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.doctor-prescription-info p {
+  margin: 0;
+  color: #438ca5;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.prescription-date {
+  min-width: 130px;
+  text-align: right;
+}
+
+.prescription-date span {
+  display: block;
+  margin-bottom: 4px;
+  color: #8a99a4;
+  font-size: 11px;
+}
+
+.prescription-date strong {
+  display: block;
+  color: #405565;
+  font-size: 13px;
+}
+
+.prescription-date small {
+  display: block;
+  margin-top: 3px;
+  color: #8a99a4;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   PRESCRIPTION TEXT
+========================================================= */
+
+.prescription-text-section {
+  padding: 22px 25px;
+  border-bottom: 1px solid #e7eef2;
+}
+
+.prescription-section-title {
+  margin-bottom: 12px;
+  color: #23445d;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.prescription-text {
+  padding: 15px 17px;
+  background: #f6fafc;
+  border-left: 3px solid #5b9fb7;
+  border-radius: 7px;
+}
+
+.prescription-text p {
+  margin: 0 0 7px;
+  color: #5f7280;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.prescription-text p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FILE SECTION
+========================================================= */
+
+.prescription-file-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 25px;
+  padding: 15px;
+  border: 1px solid #dfeaf0;
+  border-radius: 10px;
+  background: #f9fbfc;
+}
+
+.prescription-file-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: #e5f1f5;
+  color: #438ca5;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.prescription-file-details {
+  min-width: 0;
+  flex: 1;
+}
+
+.prescription-file-details strong {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 4px;
+  color: #405565;
+  font-size: 13px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.prescription-file-details span {
+  color: #8a99a4;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   FILE BUTTONS
+========================================================= */
+
+.prescription-file-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.prescription-view-btn,
+.prescription-download-btn {
+  min-height: 36px;
+  padding: 8px 14px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.prescription-view-btn {
+  border: 1px solid #5b9fb7;
+  background: #ffffff;
+  color: #438ca5;
+}
+
+.prescription-view-btn:hover {
+  background: #5b9fb7;
+  color: #ffffff;
+}
+
+.prescription-download-btn {
+  border: 1px solid #5b9fb7;
+  background: #5b9fb7;
+  color: #ffffff;
+}
+
+.prescription-download-btn:hover {
+  background: #478aa3;
+  border-color: #478aa3;
+}
+
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
+.prescription-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 14px 25px;
+  background: #fbfdfe;
+  border-top: 1px solid #edf2f5;
+}
+
+.prescription-card-footer > span {
+  color: #8a99a4;
+  font-size: 11px;
+}
+
+.prescription-open-btn {
+  border: none;
+  background: transparent;
+  color: #438ca5;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.prescription-open-btn:hover {
+  color: #23445d;
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   VIEW MODAL OVERLAY
+========================================================= */
+
+.prescription-view-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(24, 52, 69, 0.68);
+  overflow-y: auto;
+}
+
+
+/* =========================================================
+   VIEW MODAL
+========================================================= */
+
+.prescription-view-modal {
+  width: 100%;
+  max-width: 900px;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(25, 50, 65, 0.25);
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.prescription-view-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px 25px;
+  border-bottom: 1px solid #e3ebf0;
+}
+
+.prescription-view-header h2 {
+  margin: 0 0 4px;
+  color: #23445d;
+  font-size: 21px;
+}
+
+.prescription-view-header p {
+  margin: 0;
+  color: #438ca5;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.prescription-close-btn {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 50%;
+  background: #f0f5f8;
+  color: #617582;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.prescription-close-btn:hover {
+  background: #e2ebef;
+  color: #23445d;
+}
+
+
+/* =========================================================
+   MODAL CONTENT
+========================================================= */
+
+.prescription-view-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 25px;
+}
+
+
+/* =========================================================
+   MODAL TEXT
+========================================================= */
+
+.prescription-modal-text {
+  margin-bottom: 25px;
+}
+
+.prescription-modal-text h3,
+.prescription-document-preview h3 {
+  margin: 0 0 13px;
+  color: #23445d;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.prescription-modal-text > div {
+  padding: 18px;
+  background: #f6fafc;
+  border-left: 3px solid #5b9fb7;
+  border-radius: 8px;
+}
+
+.prescription-modal-text p {
+  margin: 0 0 7px;
+  color: #5f7280;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.prescription-modal-text p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   DOCUMENT PREVIEW
+========================================================= */
+
+.prescription-document-preview {
+  width: 100%;
+}
+
+.prescription-pdf-preview {
+  width: 100%;
+  height: 560px;
+  display: block;
+  border: 1px solid #dce7ed;
+  border-radius: 9px;
+  background: #f4f7f9;
+}
+
+
+/* =========================================================
+   IMAGE PREVIEW
+========================================================= */
+
+.prescription-image-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  padding: 20px;
+  background: #f5f8fa;
+  border: 1px solid #dce7ed;
+  border-radius: 9px;
+}
+
+.prescription-image-preview img {
+  max-width: 100%;
+  max-height: 600px;
+  display: block;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+
+/* =========================================================
+   OTHER FILE PREVIEW
+========================================================= */
+
+.prescription-other-file {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  background: #f6fafc;
+  border: 1px solid #dce7ed;
+  border-radius: 9px;
+}
+
+.prescription-large-file-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  background: #e5f1f5;
+  color: #438ca5;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.prescription-other-file p {
+  margin: 0 0 18px;
+  color: #718394;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+.prescription-view-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 17px 25px;
+  border-top: 1px solid #e3ebf0;
+  background: #fbfdfe;
+}
+
+.prescription-close-action {
+  min-height: 38px;
+  padding: 8px 18px;
+  border: 1px solid #d4e0e7;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #617481;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.prescription-close-action:hover {
+  background: #f1f5f7;
+}
+
+
+/* =========================================================
+   SCROLLBARS
+========================================================= */
+
+.prescription-view-content::-webkit-scrollbar {
+  width: 7px;
+}
+
+.prescription-view-content::-webkit-scrollbar-track {
+  background: #f1f5f7;
+}
+
+.prescription-view-content::-webkit-scrollbar-thumb {
+  background: #bfd2dc;
+  border-radius: 10px;
+}
+
+.prescription-view-content::-webkit-scrollbar-thumb:hover {
+  background: #91b5c4;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+  .patient-prescription-page {
+    padding: 40px 4%;
+  }
+
+  .prescription-card-header {
+    align-items: flex-start;
+  }
+
+  .prescription-file-section {
+    flex-wrap: wrap;
+  }
+
+  .prescription-file-details {
+    min-width: 200px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .patient-prescription-page {
+    padding: 30px 16px;
+  }
+
+  .prescription-page-header {
+    align-items: flex-start;
+  }
+
+  .prescription-page-header h1 {
+    font-size: 26px;
+  }
+
+  .prescription-count {
+    min-width: 75px;
+    padding: 10px 12px;
+  }
+
+  .prescription-count span {
+    font-size: 21px;
+  }
+
+  .prescription-card-header {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .prescription-date {
+    width: 100%;
+    text-align: left;
+  }
+
+  .prescription-text-section {
+    padding: 18px;
+  }
+
+  .prescription-file-section {
+    align-items: flex-start;
+    margin: 18px;
+    padding: 13px;
+  }
+
+  .prescription-file-details {
+    width: calc(100% - 70px);
+    min-width: 0;
+  }
+
+  .prescription-file-actions {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .prescription-view-btn,
+  .prescription-download-btn {
+    flex: 1;
+  }
+
+  .prescription-card-footer {
+    padding: 13px 18px;
+  }
+
+  /* Modal */
+
+  .prescription-view-overlay {
+    padding: 10px;
+  }
+
+  .prescription-view-modal {
+    max-height: 95vh;
+    border-radius: 13px;
+  }
+
+  .prescription-view-header {
+    padding: 17px;
+  }
+
+  .prescription-view-content {
+    padding: 17px;
+  }
+
+  .prescription-pdf-preview {
+    height: 450px;
+  }
+
+  .prescription-view-footer {
+    padding: 14px 17px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .patient-prescription-page {
+    padding: 25px 12px;
+  }
+
+  .prescription-page-header {
+    flex-direction: column;
+  }
+
+  .prescription-count {
+    align-self: flex-start;
+  }
+
+  .doctor-prescription-info h2 {
+    font-size: 16px;
+  }
+
+  .prescription-file-section {
+    flex-direction: column;
+  }
+
+  .prescription-file-details {
+    width: 100%;
+  }
+
+  .prescription-file-actions {
+    width: 100%;
+  }
+
+  .prescription-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .prescription-pdf-preview {
+    height: 380px;
+  }
+}

@@ -1,0 +1,82 @@
+/* :root {
+  --primary: #6F96D1;
+  --primary-dark: #344EAD;
+  --primary-light: #BAD6EB;
+  --background: #EDF0F5;
+  --light-bg: #FFF9EF;
+  --nav-dark: #091F5B;
+  --card-bg: #C4D8F1;
+} */
+
+/* Layout and Body */
+body {
+  background-color: var(--background);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.bgColor {
+  background-color: var(--light-bg);
+  min-height: 100vh;
+}
+
+/* Card Styling */
+.card {
+  background-color: var(--card-bg);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Labels and Inputs */
+.form-label {
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.form-control,
+.form-select {
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-dark);
+  box-shadow: 0 0 0 0.2rem rgba(111, 150, 209, 0.25);
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: var(--primary);
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Headings */
+.heading h4 {
+  color: var(--primary-dark);
+}
+
+/* Responsive image and layout */
+.register-image {
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.logo-slide-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Simple floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}

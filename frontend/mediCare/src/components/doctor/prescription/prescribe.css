@@ -1,0 +1,301 @@
+/* =========================================================
+   PRESCRIPTION PAGE
+========================================================= */
+
+.prescription-page {
+  min-height: calc(100vh - 140px);
+  background: #f5f9fc;
+  padding: 45px 20px 60px;
+}
+
+.prescription-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.prescription-header {
+  margin-bottom: 28px;
+}
+
+.prescription-header h1 {
+  margin: 0 0 8px;
+  color: #23445d;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.prescription-header p {
+  margin: 0;
+  color: #6b7f8d;
+  font-size: 15px;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.prescription-form {
+  background: #ffffff;
+  border: 1px solid #e1ebf1;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 25px rgba(35, 68, 93, 0.06);
+}
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 9px;
+  color: #23445d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group select,
+.form-group textarea,
+.form-group input[type="file"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.form-group select {
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid #d5e2e9;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #405565;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.form-group select:focus {
+  border-color: #5b9fb7;
+  box-shadow: 0 0 0 3px rgba(91, 159, 183, 0.12);
+}
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.form-group textarea {
+  min-height: 180px;
+  padding: 14px;
+  border: 1px solid #d5e2e9;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #405565;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+  resize: vertical;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.form-group textarea::placeholder {
+  color: #9aaab4;
+}
+
+.form-group textarea:focus {
+  border-color: #5b9fb7;
+  box-shadow: 0 0 0 3px rgba(91, 159, 183, 0.12);
+}
+
+/* =========================================================
+   FILE INPUT
+========================================================= */
+
+.form-group input[type="file"] {
+  padding: 12px;
+  border: 1px dashed #b9ccd7;
+  border-radius: 9px;
+  background: #f8fbfd;
+  color: #405565;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.form-group input[type="file"]:hover {
+  border-color: #5b9fb7;
+  background: #f4f9fb;
+}
+
+.form-group input[type="file"]::file-selector-button {
+  margin-right: 12px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 7px;
+  background: #5b9fb7;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-group input[type="file"]::file-selector-button:hover {
+  background: #438ca5;
+}
+
+/* =========================================================
+   SELECTED FILE
+========================================================= */
+
+.form-group p {
+  margin: 10px 0 0;
+  color: #5c7180;
+  font-size: 13px;
+}
+
+.form-group p strong {
+  color: #23445d;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 8px;
+  color: #899ba7;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.prescription-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid #e7eef2;
+}
+
+.prescription-actions button {
+  min-width: 130px;
+  height: 45px;
+  padding: 0 20px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Clear */
+
+.prescription-actions button[type="button"] {
+  border: 1px solid #d1dfe6;
+  background: #ffffff;
+  color: #526b7a;
+}
+
+.prescription-actions button[type="button"]:hover {
+  border-color: #aebfc9;
+  background: #f7fafb;
+}
+
+/* Save */
+
+.prescription-actions button[type="submit"] {
+  border: none;
+  background: #5b9fb7;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(91, 159, 183, 0.2);
+}
+
+.prescription-actions button[type="submit"]:hover {
+  background: #438ca5;
+  transform: translateY(-1px);
+}
+
+.prescription-actions button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* =========================================================
+   LOADING / EMPTY TEXT
+========================================================= */
+
+.prescription-form > p {
+  color: #6b7f8d;
+  font-size: 14px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .prescription-page {
+    padding: 30px 15px 45px;
+  }
+
+  .prescription-container {
+    max-width: 100%;
+  }
+
+  .prescription-form {
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+
+  .prescription-header h1 {
+    font-size: 25px;
+  }
+
+  .prescription-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .prescription-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .prescription-page {
+    padding: 22px 12px 35px;
+  }
+
+  .prescription-form {
+    padding: 20px 16px;
+  }
+
+  .prescription-header h1 {
+    font-size: 22px;
+  }
+
+  .prescription-header p {
+    font-size: 13px;
+  }
+
+  .form-group textarea {
+    min-height: 150px;
+  }
+}

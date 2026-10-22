@@ -1,0 +1,3 @@
+welcome page pe nav, about, features nhi aa rha
+
+login aur registration pages me overlap ho rha ho

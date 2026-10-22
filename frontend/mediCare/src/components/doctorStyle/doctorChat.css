@@ -1,0 +1,387 @@
+.doctor-chat-page {
+  min-height: 100vh;
+  background: #f5f8fc;
+}
+
+.doctor-chat-page-header {
+  padding: 28px 32px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5eaf0;
+}
+
+.doctor-chat-page-header h1 {
+  margin: 0;
+  color: #17324d;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.doctor-chat-page-header p {
+  margin: 6px 0 0;
+  color: #6b7785;
+  font-size: 14px;
+}
+
+.doctor-chat-error {
+  margin: 20px 32px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #fff1f1;
+  color: #b42318;
+  border: 1px solid #f3c4c4;
+}
+
+.doctor-chat-container {
+  display: flex;
+  height: calc(100vh - 150px);
+  margin: 0;
+  background: #ffffff;
+}
+
+/* ================================
+   PATIENT LIST
+================================ */
+
+.doctor-patient-list {
+  width: 330px;
+  min-width: 330px;
+  border-right: 1px solid #e2e8f0;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-patient-header {
+  padding: 20px;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.doctor-patient-header h2 {
+  margin: 0;
+  font-size: 19px;
+  color: #17324d;
+}
+
+.doctor-patient-header span {
+  display: block;
+  margin-top: 4px;
+  color: #7b8794;
+  font-size: 13px;
+}
+
+.doctor-patient-search {
+  padding: 14px;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.doctor-patient-search input {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #d8e0e8;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.doctor-patient-search input:focus {
+  border-color: #2878c8;
+}
+
+.doctor-patients {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.doctor-patient-item {
+  width: 100%;
+  border: none;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f3f6;
+  transition: background 0.2s;
+}
+
+.doctor-patient-item:hover {
+  background: #f5f9fd;
+}
+
+.doctor-patient-item.active {
+  background: #eaf4ff;
+  border-left: 3px solid #2878c8;
+}
+
+.doctor-patient-avatar,
+.doctor-chat-header-avatar {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #dcecff;
+  color: #1f67a8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.doctor-patient-avatar img,
+.doctor-chat-header-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.doctor-patient-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-patient-info strong {
+  color: #20364d;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.doctor-patient-info small {
+  color: #7b8794;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.doctor-chat-loading,
+.doctor-no-patients {
+  padding: 30px 20px;
+  text-align: center;
+  color: #7b8794;
+  font-size: 14px;
+}
+
+/* ================================
+   CHAT SECTION
+================================ */
+
+.doctor-chat-section {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+}
+
+.doctor-chat-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.doctor-chat-header-info h2 {
+  margin: 0;
+  color: #17324d;
+  font-size: 17px;
+}
+
+.doctor-chat-header-info p {
+  margin: 4px 0 0;
+  color: #7b8794;
+  font-size: 13px;
+}
+
+/* ================================
+   MESSAGES
+================================ */
+
+.doctor-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 25px;
+}
+
+.doctor-message-row {
+  display: flex;
+  margin-bottom: 13px;
+}
+
+.doctor-message-row.doctor {
+  justify-content: flex-end;
+}
+
+.doctor-message-row.patient {
+  justify-content: flex-start;
+}
+
+.doctor-message {
+  max-width: 65%;
+  padding: 11px 14px;
+  border-radius: 12px;
+}
+
+.doctor-message.doctor {
+  background: #2878c8;
+  color: #ffffff;
+  border-bottom-right-radius: 3px;
+}
+
+.doctor-message.patient {
+  background: #ffffff;
+  color: #26384a;
+  border: 1px solid #e1e7ee;
+  border-bottom-left-radius: 3px;
+}
+
+.doctor-message p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.doctor-message-time {
+  display: block;
+  margin-top: 5px;
+  font-size: 10px;
+  opacity: 0.7;
+  text-align: right;
+}
+
+/* ================================
+   INPUT
+================================ */
+
+.doctor-message-input {
+  display: flex;
+  gap: 10px;
+  padding: 15px 20px;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+}
+
+.doctor-message-input textarea {
+  flex: 1;
+  resize: none;
+  min-height: 42px;
+  max-height: 110px;
+  padding: 11px 13px;
+  border: 1px solid #d7e0e8;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.doctor-message-input textarea:focus {
+  border-color: #2878c8;
+}
+
+.doctor-message-input button {
+  min-width: 90px;
+  border: none;
+  border-radius: 8px;
+  background: #2878c8;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.doctor-message-input button:hover {
+  background: #1f67a8;
+}
+
+.doctor-message-input button:disabled {
+  background: #aebdca;
+  cursor: not-allowed;
+}
+
+/* ================================
+   EMPTY CHAT
+================================ */
+
+.doctor-chat-empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.doctor-chat-empty-content {
+  text-align: center;
+  max-width: 400px;
+}
+
+.doctor-chat-empty-content h2,
+.doctor-chat-empty-content h3 {
+  margin: 0 0 8px;
+  color: #30475c;
+}
+
+.doctor-chat-empty-content p {
+  margin: 0;
+  color: #7b8794;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 850px) {
+  .doctor-patient-list {
+    width: 270px;
+    min-width: 270px;
+  }
+
+  .doctor-message {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 650px) {
+  .doctor-chat-container {
+    height: calc(100vh - 130px);
+  }
+
+  .doctor-patient-list {
+    width: 100px;
+    min-width: 100px;
+  }
+
+  .doctor-patient-info {
+    display: none;
+  }
+
+  .doctor-patient-item {
+    justify-content: center;
+    padding: 12px 5px;
+  }
+
+  .doctor-patient-header h2,
+  .doctor-patient-header span,
+  .doctor-patient-search {
+    display: none;
+  }
+
+  .doctor-patient-header {
+    height: 15px;
+    padding: 10px;
+  }
+
+  .doctor-message {
+    max-width: 85%;
+  }
+}

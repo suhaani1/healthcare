@@ -1,0 +1,130 @@
+/* .welcome {
+  font-family: 'inter', sans-serif; */
+  /* background-image: url("../assests/welcome page/background.webp.crdownload");  */
+  /* background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(rgba(0, 49, 73, 0.7)),
+    url('../../assets/welcome page/background.webp.crdownload') center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+
+
+
+} 
+
+
+/* 
+#logo {
+   height: 200px;
+   width: 200px;
+   border-radius: 2px;
+   position: absolute;
+   
+ overflow: hidden;
+ 
+  
+} */
+
+/* img a:hover {
+  background-color: #ddd;
+  color: black;
+
+} 
+
+
+.welcome-navbar .navbar-brand {
+  color: beige;
+}
+
+.navbar-nav .navbar-item .nav-link {
+  color: beige;
+}
+
+
+.hero-section img {
+  width: 80px;
+}
+
+.signup-section h5 {
+  font-weight: bold;
+  font-size: 1.25rem;
+} */
+
+
+/* .img-fluid{
+  height: 300px;;
+  width: 300px;;
+} */
+/* .feature.img-fluid{
+ height:400px;
+ width:400px;
+}
+.btn-gap {
+  gap: 10px;
+}
+
+.card {
+  border-radius: 12px;
+  border: none;
+}
+
+
+.accordion-button {
+  background-color: #f8f9fa;
+  border: none;
+  font-size: 1.1rem;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  background-color: #e7f1ff;
+}
+
+.accordion-button::after {
+  filter: invert(0.4);
+}
+
+.accordion-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  transition: box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+/* .container box{
+  border: ;
+} */
+
+/* .faq-section {
+  min-height: 100vh;
+  background: linear-gradient(to right, #f1f8e9, #e0f7fa);
+  padding: 0px 0;
+}*/
+/* .main{ 
+   background: linear-gradient(135deg, #00c9ff, #92fe9d); 
+ background: linear-gradient(to right, #f1f8e9, #e0f7fa);
+
+}
+.contact{
+  background: linear-gradient(to right, #f1f8e9, #e0f7fa);
+
+}
+.about{
+  background: linear-gradient(to right, #f1f8e9, #e0f7fa);
+
+}  */
+
+
+/* .feature{
+  height:300px;
+  width:300px;
+} */
+
+/* footer */
+/* .main_footer{
+  background-color: #4A6D7D;
+} */ 
