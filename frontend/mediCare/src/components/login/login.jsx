@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../register/register.css";
-import BackgroundImage from "../../assets/welcome page/Medicare.png";
+import BackgroundImage from "../../assets/welcome page/MediCare.png";
 import RegisterImage from "../../assets/welcome page/register.png";
 
 function Login() {
