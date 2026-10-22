@@ -5,7 +5,7 @@ import AppointmentImage from "../../assets/welcome page/appointment.png";
 import CalculationImage from "../../assets/welcome page/calculation.png";
 import SupportImage from "../../assets/welcome page/support.png";
 import RecordsImage from "../../assets/welcome page/records1.png";
-import SymptomsImage from "../../assets/welcome page/Symptoms.png";
+import SymptomsImage from "../../assets/welcome page/symptoms.png";
 import RemindersImage from "../../assets/welcome page/reminders.png";
 import BlogImage from "../../assets/welcome page/blog.jpg";
 import BloggImage from "../../assets/welcome page/blog2.avif";
