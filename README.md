@@ -116,27 +116,6 @@ cd ../saathiCare_be
 npm install
 ```
 
-## Environment Variables
-
-Create a `.env` file inside the backend directory.
-
-Example:
-
-```env
-PORT=3000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-```
-
-Do not upload the actual `.env` file to GitHub.
-
-You can provide an `.env.example` file containing only the variable names:
-
-```env
-PORT=
-MONGO_URI=
-JWT_SECRET=
-```
 
 ## Running the Application
 
@@ -145,14 +124,10 @@ JWT_SECRET=
 Inside `saathiCare_be`:
 
 ```bash
-npm start
+nodemon start
 ```
 
-If the project uses nodemon:
 
-```bash
-npm run dev
-```
 
 ### Start Frontend
 
@@ -168,7 +143,7 @@ The frontend will normally be available at:
 http://localhost:5173
 ```
 
-The backend will run on the port configured in `.env`.
+
 
 ## API
 
