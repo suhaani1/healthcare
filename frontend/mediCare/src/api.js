@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://saathicare-backend.onrender.com/api",
+  baseURL: "http://localhost:3010/api",
 });
 
 export default api;
