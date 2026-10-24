@@ -173,6 +173,9 @@ The authentication flow includes:
 4. JWT generation
 5. Protected API requests
 6. Role-based access
+   
+## Screenshots
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/36fae3b4-92e7-4336-9300-c9efcae37742" />
 
 ## Future Improvements
 
