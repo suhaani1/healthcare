@@ -175,7 +175,20 @@ The authentication flow includes:
 6. Role-based access
    
 ## Screenshots
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/36fae3b4-92e7-4336-9300-c9efcae37742" />
+<img width="1917" height="858" alt="image" src="https://github.com/user-attachments/assets/45a95107-1885-4714-963d-4ad01d8649ac" />
+
+### Patient's Portal
+<img width="1917" height="861" alt="image" src="https://github.com/user-attachments/assets/b260cd9e-bdc1-45f1-8837-814c29ff2472" />
+
+<img width="1906" height="862" alt="image" src="https://github.com/user-attachments/assets/60e3de09-20bb-41e0-b43e-9ce3d0ef0341" />
+
+<img width="1917" height="846" alt="image" src="https://github.com/user-attachments/assets/be712991-d668-47dd-a1ac-4723d15cd10a" />
+<img width="1917" height="896" alt="image" src="https://github.com/user-attachments/assets/ee5f4fdd-2de1-4290-801c-a44553640170" />
+
+### Doctor's Portal
+<img width="1917" height="857" alt="image" src="https://github.com/user-attachments/assets/d7ef562d-4c70-465d-b2bf-2b7283496797" />
+<img width="1747" height="852" alt="image" src="https://github.com/user-attachments/assets/58729c3f-f3f4-45c2-aaf8-a6622a9cb031" />
+
 
 ## Future Improvements
 
